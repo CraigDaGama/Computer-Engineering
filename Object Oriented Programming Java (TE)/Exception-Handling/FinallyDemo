@@ -1,0 +1,25 @@
+/* Finally creates a block of code that will be executed after a try/catch block has completed and before the code following the try/catch block.
+The finally block will execute whether or not an exception is thrown, if an exception is thrown finally block will execute even if no catch statement matches the exception. */
+
+package ExceptionHandling;
+
+class FinallyDemo {
+	static void procA() {
+		try {
+			System.out.println("procA");
+			throw new RuntimeException("demo");
+		}
+		finally {
+			System.out.println("ProcA's finally");
+		}
+	}
+	public static void main(String args[]) {
+		try {
+			procA();
+		}
+		\\ Exception is a parent class 
+		catch (Exception e) {
+			System.out.println("Exception caught");
+		}
+	}
+}

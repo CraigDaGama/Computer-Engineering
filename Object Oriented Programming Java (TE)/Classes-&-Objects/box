@@ -1,0 +1,17 @@
+package classes_objects;
+class Box
+{
+	double length,height,breadth;
+	void computearea()
+	{
+		System.out.println("area="+(length*breadth));
+	}
+	public static void main(string args[])
+	{
+		box b1=new box();
+		System.out.println("length:"+b1.length);
+		System.out.println("breadth:"+b1.breadth);
+		System.out.println("height:"+b1.height);
+		b1.computearea();
+	}
+}

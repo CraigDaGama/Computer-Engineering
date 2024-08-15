@@ -1,0 +1,40 @@
+package classes_objects;
+public class Box1
+{
+	double length,height,breadth;
+	Box1(){length=height=breadth;}
+	Box1(double l,double b,double h)
+	{length=l;breadth=b;height=h;}
+	Box1(Box1 b)
+	{
+	    length=b.length;breadth=b.breadth;height=b.height;
+	}
+	void computearea()
+	{
+		System.out.println("area="+(length*breadth));
+	}
+	void computevolume()
+	{
+	    	System.out.println("volume="+(length*breadth*height));
+	}
+class Test
+{
+	public static void main(String args[])
+	{
+		box b1=new box();
+		System.out.println("Box1 details:");
+		System.out.println("length:"+b1.length);
+		System.out.println("breadth:"+b1.breadth);
+		System.out.println("height:"+b1.height);
+		b1.computearea();
+		b1.computevolume();
+		box b2=new Box1(2,3,2);
+		System.out.println("Box2 details:");
+		System.out.println("length:"+b2.length);
+		System.out.println("breadth:"+b2.breadth);
+		System.out.println("height:"+b2.height);
+		b2.computearea();
+		b2.computevolume();
+	}
+}
+}		

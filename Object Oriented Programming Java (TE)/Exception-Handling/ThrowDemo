@@ -1,0 +1,25 @@
+package ExceptionHandling;
+
+class ThrowDemo {
+	int a;
+	void demoproc(ThrowDemo obj) {
+		try {
+			obj = null;
+			System.out.println(obj.a);
+		}
+		catch(NullPointerException e) {
+			System.out.println("Exception caught in the function");
+			throw e; // rethrow the exception
+		}
+	}
+	public static void main(String args[]) {
+		try {
+			ThrowDemo d = new ThrowDemo();
+			ThrowDemo d1 = new ThrowDemo();
+			d.demoproc(d1);
+		}
+		catch (NullPointerException e) {
+			System.out.println("Recaught: " + e);
+		}
+	}
+}

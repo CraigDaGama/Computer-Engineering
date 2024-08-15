@@ -1,0 +1,19 @@
+package ExceptionHandling;
+
+class ThrowsDemo {
+	int a;
+	void throwOne(ThrowsDemo d) throws NullPointerException {
+			d = null;
+			d.a = 3;
+	}
+	public static void main(String args[]) {
+		ThrowsDemo d1 = new ThrowsDemo();
+		ThrowsDemo d2 = new ThrowsDemo();
+		try {
+		        d1.throwOne(d2);
+		}
+		catch (NullPointerException e) {
+			System.out.println("Caught: " + e);
+		}
+	}
+}
