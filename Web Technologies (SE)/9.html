@@ -1,0 +1,30 @@
+<!--phone no validation using pattern matching-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var pn=document.getElementById("ph").value;
+            var x= /^[789]{1}[0-9]{9}$/;
+            if(x.test(pn)==false)
+        {
+            alert("Invalid");
+        }
+        else{
+            alert("valid");
+            document.write("Phone Number is:"+pn)
+        }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <label>Enter your phone number</label><br>
+        <input type="textbox" id="ph"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
