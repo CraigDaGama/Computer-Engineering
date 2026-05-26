@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            function f1() 
+            {
+                var fname="";
+                var lname="";
+
+                fname = document.getElementById("fn").value;
+                lname = document.getElementById("ln").value;
+
+                if(fname=="")
+                {
+                    alert("First name field cant be empty")
+                }
+
+                if(lname=="")
+                {
+                    alert("Last name field cant be empty")
+                }
+
+                else
+                {
+                    document.write("<br>first name entered is: " +fname);
+                    document.write("<br>last name entered is: " +lname);
+                }
+
+                
+            }
+        </script>
+        <form onsubmit="return f1()" action="1.html">
+            <label>First Name</label>
+            <input type="text" id="fn"><br>
+            <label>Last Name</label>
+            <input type="text" id="ln"><br>
+            <input type="submit"></input>
+        </form>
+        
+    </body>
+</html>
