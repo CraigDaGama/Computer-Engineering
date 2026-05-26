@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            function f1() 
+            {
+                var x = document.getElementById("ad");
+                var y = x.options[x.selectedIndex].value;
+
+                if(y=="")
+                {
+                    alert("Address not selected ");
+                    return false;
+                }
+                else
+                {
+                    alert("Address selected is: "+ y);
+                    return true;
+                }
+            }
+        </script>
+        <form onsubmit="return f1()">
+            <label>select your city</label>
+            <input type="radio" value="COMP">COMP</input><br>
+            <input type="radio" value="ECE">ECE</input><br>
+            <input type="radio" value="MECH">MECH</input><br>
+            <input type="submit"></input>
+        </form>
+    </body>
+</html>
