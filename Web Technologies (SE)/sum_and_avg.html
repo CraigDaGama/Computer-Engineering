@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+var a=[];
+var i, n, sum=0, avg=0;
+
+n = parseInt(prompt("Enter value of n:"));
+
+for(i=0;i<n;i++)
+{
+a[i] = parseInt(prompt("Enter next element:"));
+}
+
+document.write("<br>Elements are: ");
+for(i=0;i<n;i++)
+{
+document.write(" "+a[i]);
+}
+
+for(i=0;i<n;i++)
+{
+sum = sum + a[i];
+}
+
+avg = sum/n;
+
+document.write("<br>Sum is "+sum);
+document.write("<br>Average is "+avg);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
