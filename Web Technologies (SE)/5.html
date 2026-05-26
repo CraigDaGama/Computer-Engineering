@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For-in and For-of Loops</title>
+</head>
+<body>
+    <script>
+        var car = {
+            make: 'Toyota',
+            model: 'Corolla',
+            year: 2022
+        };
+
+        document.write("For-in Loop (Objects)<br>");
+        for (var key in car) {
+            document.write(key + ": " + car[key] + "<br>");
+        }
+
+        var fruits = ['Apple', 'Banana', 'Mango'];
+
+        document.write("<br>For-of Loop (Arrays)<br>");
+        for (var fruit of fruits) {
+            document.write(fruit + "<br>");
+        }
+    </script>
+</body>
+</html>
