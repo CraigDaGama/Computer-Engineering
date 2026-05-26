@@ -1,0 +1,32 @@
+<!--validate username entered by the user-->
+<!--username should contain COMP followed by 3 digits-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function validate() {
+            var pn = document.getElementById("username").value;
+            var x = /^COMP[0-9]{3}$/;
+            if (x.test(pn) == false) {
+                alert("Invalid Username");
+            }
+            else {
+                alert("valid");
+                document.write("Username is:" + pn)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <label>Enter username</label><br>
+        <input type="textbox" id="username"><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
