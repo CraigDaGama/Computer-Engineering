@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Demonstration</title>
+    <script>
+        function handleClick() {
+            alert("Button clicked!");
+        }
+
+        function handleDoubleClick() {
+            alert("Button double-clicked!");
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevents the form from submitting
+            alert("Form submitted!");
+        }
+
+        function handleReset() {
+            alert("Form reset!");
+        }
+
+        function handleLoad() {
+            alert("Page loaded!");
+        }
+
+        function handleSelect() {
+            alert("Text selected!");
+        }
+
+        function handleChange() {
+            alert("Value changed!");
+        }
+    </script>
+</head>
+<body onload="handleLoad()">
+    <h2>JavaScript Events Demonstration</h2>
+
+    <!-- onclick event -->
+    <button onclick="handleClick()">Click Me</button><br><br>
+
+    <!-- ondblclick event -->
+    <button ondblclick="handleDoubleClick()">Double-Click Me</button><br><br>
+
+    <!-- onsubmit and onreset events -->
+    <form onsubmit="handleSubmit(event)" onreset="handleReset()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form><br><br>
+
+    <!-- onselect event -->
+    <label for="text">Select some text:</label>
+    <input type="text" id="text" onselect="handleSelect()"><br><br>
+
+    <!-- onchange event -->
+    <label for="dropdown">Choose an option:</label>
+    <select id="dropdown" onchange="handleChange()">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <div id="result"></div>
+</body>
+</html>
