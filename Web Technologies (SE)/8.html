@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            function f1() 
+            {
+                var x = document.getElementsByName("lang");
+                var languages = "";
+
+                for(var i=0;i<x.length;i++)
+                {
+                    if(languages=="")
+                    {
+                        alert("No values selected");
+                        return false;
+                    }
+                    else
+                    {
+                        languages = languages + " " + x[i].value;
+                    }
+                    
+                }
+                alert("values selected are: "+languages);
+ 
+            }
+        </script>
+        <form onsubmit="return f1()">
+            <label>select your language</label><br>
+            <input name="lang" value="English" type="checkbox">English</input><br>
+            <input name="lang" value="Konkani" type="checkbox">Konkani</input><br>
+            <input name="lang" value="Portuguese" type="checkbox">Portuguese</input><br>
+            <input name="lang" value="German" type="checkbox">German</input><br>
+            <input type="submit"></input>
+
+        </form>
+        
+    </body>
+</html>
