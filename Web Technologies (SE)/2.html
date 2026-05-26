@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            function f1() 
+            {
+                var x = document.getElementById("ad");
+                var y = x.options[x.selectedIndex].value;
+
+                if(y=="")
+                {
+                    alert("Address not selected ");
+                    return false;
+                }
+                else
+                {
+                    alert("Address selected is: "+ y);
+                    return true;
+                }
+            }
+        </script>
+        <form onsubmit="return f1()"">
+            <label>select your city</label>
+            <select id="ad">
+                <option value=""></option>
+                <option value="Mapusa">Mapusa</option>
+                <option value="Panjim">Panjim</option>
+                <option value="Vasco">Vasco</option>
+            </select>
+            <br>
+            <input type="submit"></input>
+        </form>
+    </body>
+</html>
