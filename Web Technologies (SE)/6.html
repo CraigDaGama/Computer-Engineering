@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+     var a=[];
+     var i,sum=0,avg,totalM=500;
+      
+     for(i=0;i<5;i++)
+     {
+        a[i]=parseInt(prompt("Enter your  marks:"));
+     }
+     document.write("Entered marks are: ");
+     for(i=0;i<5;i++)
+     {
+        document.write("<br>"+a[i]);
+     }
+
+     for(i=0;i<5;i++)
+     {
+        sum=sum+a[i];
+     }
+     var per=(sum/totalM)*100;
+     //document.write("<br> Sum is: "+sum);
+     document.write("<br> Percentage is: "+per+"%")
+
+     function grade()
+     {
+        if(per>=90 && per<=100)
+        document.write("Grade: A");
+
+        else if(per>=80 && per<=89)
+        document.write("Grade: B");
+
+       else if(per>=70 && per<=79)
+        document.write("Grade: C");
+
+        else if(per>=60 && per<=69)
+        document.write("Grade: D");
+    
+        else
+        document.write("Grade: F")
+     }
+
+     function report()
+     {
+        document.write("STUDENT REPORT CARD");
+        document.write("Total marks (out of 500)="+sum);
+        document.write("Percentage "+per);
+     }
+     report();
+    </script>
+</head>
+<body>
+    <br>
+    <button type="button" onclick="grade()">Show grade</button>
+</body>
+</html>
